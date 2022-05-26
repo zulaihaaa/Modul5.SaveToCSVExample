@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/btnRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/read_data"
+        android:onClick="readData"/>
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_data"
+        android:layout_above="@+id/btnRead"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveData"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout">
+        <EditText
+            android:id="@+id/etX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/x_value"
+            android:inputType="numberDecimal"
+            android:textAlignment="center" />
+        <EditText
+            android:id="@+id/etY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/y_value"
+            android:inputType="numberDecimal"
+            android:textAlignment="center" />
+        <EditText
+            android:id="@+id/etZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/z_value"
+            android:inputType="numberDecimal"
+            android:textAlignment="center" />
+    </LinearLayout>
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/tvData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:text="@string/data_csv" />
+</RelativeLayout>
